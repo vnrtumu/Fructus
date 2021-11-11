@@ -31,7 +31,7 @@ struct FruitDetailView: View {
                             .font(.headline)
                             .multilineTextAlignment(.leading)
                         //Nutrients
-                        
+                        FruitNutrientsView(fruit: fruit)
                         //Subheadline
                         Text("Lear more about \(fruit.title)".uppercased())
                             .fontWeight(.bold)
@@ -55,6 +55,7 @@ struct FruitDetailView: View {
             }//: Scroll
             .edgesIgnoringSafeArea(.top)
         }//: Navigation
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
